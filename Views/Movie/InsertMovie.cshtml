@@ -1,0 +1,46 @@
+﻿@model Movie
+
+<h2 class="create-movie-title">Create a New Movie Review</h2>
+
+@using (Html.BeginForm("InsertMovieToDatabase", "Movie", "Post"))
+{
+    <input asp-for="MovieID" type="hidden" value="" />
+
+    <div class="form-group">
+        <label for="">Select a Movie Category:</label>
+        <select class="form-control-container" name="CategoryID" value="">
+            @foreach (var mov in Model.Created_Movie)
+            {
+                <option value="@mov.CategoryID">@mov.CategoryID @mov.Genre</option>
+            }
+        </select>
+    </div>
+
+    <label asp-for="Name" class="control-label">Name:</label>
+    <input type="text" name="Name" class="form-control-container" value="" />
+
+    <label asp-for="Year" class="control-label">Year:</label>
+    <input type="number" name="Year" class="form-control-container" value="" />
+
+    <label asp-for="Genre" class="control-label">Genre:</label>
+    <input type="text" name="Genre" class="form-control-container" value="" />
+    <p class="insert-genre-text">
+        * Insert name of Genre that you picked in the "Select a Movie Category list" here.
+    </p>
+
+    <label asp-for="Rating" class="control-label">Rating:</label>
+    <input type="number" name="Rating" class="form-control-container" value="" />
+
+    <label asp-for="Director" class="control-label">Director:</label>
+    <input type="text" name="Director" class="form-control-container" value="" />
+
+    <label asp-for="ViewerReview" class="control-label">Review:</label>
+    <textarea type="text" name="ViewerReview" class="form-control-textarea" value="" rows="20" maxlength="3000"></textarea>
+
+    <div>
+        <input type="submit" value="Create Review" class="btn insert-btn-primary-insert" />
+    </div>
+}
+
+
+

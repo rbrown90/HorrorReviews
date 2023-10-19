@@ -1,0 +1,28 @@
+﻿@model Movie
+
+<h2 class="update-movie-title">Update @Model.Name</h2>
+
+@using (Html.BeginForm("UpdateMovieToDatabase", "Movie", "Post"))
+{
+    <input asp-for="MovieID" type="hidden" value="@Model.MovieID" />
+
+    <label asp-for="Name" class="update-control-label">Name:</label>
+    <input type="text" name="Name" class="update-form-control-container" value="@Model.Name" />
+
+    <label asp-for="Genre" class="update-control-label">Genre:</label>
+    <input type="text" name="Genre" class="update-form-control-container" value="@Model.Genre" />
+    <p class="update-genre-text">
+        * Genres are as follows: Slasher, SciFi, Monster, Psychological, International, and Other. If you cannot
+        find the exact genre, classify as close to one of the categories as possible. Thank you!
+    </p>
+    <div>
+        <label asp-for="Director" class="update-control-label">Director:</label>
+        <input type="text" name="Director" class="update-form-control-container" value="@Model.Director" />
+    </div>
+
+    <div>
+        <input type="submit" value="Update Review" class="btn update-btn-primary-insert" />
+    </div>
+}
+
+

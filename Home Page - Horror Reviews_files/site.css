@@ -1,0 +1,84 @@
+﻿html {
+  font-size: 16px;
+  color: white;
+}
+
+body {
+    color: white;
+    background-color: black;
+    background-image: linear-gradient(to top, rgba(0,0,0,0), #151515), url('https://cdn.myportfolio.com/86b505f9-cbb7-47a4-b96a-6cf50cc92c02/20468e70-ae28-4f8d-8957-4fb79e25af13_rw_1920.jpg?h=5b1a1b2fc8e1c4afe3467ed58d64c394');
+    background-size: cover;
+}
+
+html {
+    position: relative;
+    min-height: 1200px;
+}
+
+.home-page-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-indent: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 2.0em;
+    text-align: center;
+    text-shadow: white 1px 0 10px;
+}
+
+.home-page-container {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    padding-top: 60px;
+    text-shadow: white 1px 0 10px;
+}
+
+.text-center{
+    margin-top: 120px;
+}
+
+.form-control {
+    width: 20%;
+    margin-left: 40%;
+    box-shadow: 2px 2px 4px rgb(25,170,170);
+}
+
+.form-label{
+    margin-left: 46%;
+    font-size: 16px;
+}
+
+.container-fluid{
+    background: black;
+    font-size: 18px;
+    color: white;
+}
+
+.header-container{
+    background: black;
+    color: white;
+}
+
+.table{
+    color: white;
+}
+
+.movie-view-table{
+    justify-content:flex-end;
+    text-align: right;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+.text-dark{
+    color: white;
+}
+
+
+
+
+

@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Horror Fanatic Reviews</title>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="home-page-container">Horror Fanatic Reviews</h1>
+        <p class="home-page-text">
+            Welcome to Horror Fanatic Reviews, where the last horror movie you watched is the next one we might want to see!
+            Movie tickets are so expensive now and I can agree we all hate to waste on money on a mundane scare! That's where you and I come in!
+            We are tasked with making sure our follow horror addicts get all the meat with as little fat as possible. If you watch something that you think is great,
+            create and leave a review for the rest of us. There are so many types of horror genres and we simply just can't watch them all... But we might be able to narrow down the good
+            ones are least!
+        </p>
+    </div>
+    <label class="form-label">Choose Title:</label>
+    @using (Html.BeginForm("Search", "Movie", FormMethod.Get))
+    {
+        <p>
+            <span class="text-box-container">@Html.TextBox("searchString")</span>
+            <input type="Submit" value="Search" style=" margin-left: 49%; box-shadow: 2px 2px 4px rgb(25,170,170); border-radius: 5px; background: white; color: black; margin-top: 10px;" />
+        </p>
+    }
+
+
+</body>

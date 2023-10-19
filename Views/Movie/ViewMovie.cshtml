@@ -1,0 +1,44 @@
+﻿@model Movie
+
+<h3 class="view-movie-title">@Model.Name Review</h3>
+
+
+
+<div class="view-movie">
+    <ul class="view-list-container">
+        <li style="list-style-type: none;">
+           <img src="~/assets/images/@Model.ImgPath" style="height: 14%; width: 28%; display: inline-block; display: inline; float: left; margin-left: 270px;"/>
+        </li>
+        <li class="view-list-movie">Year</li>
+        <li class="view-list-model">@Model.Year</li>
+        <li class="view-list-movie">Name</li>
+        <li class="view-list-model">@Model.Name</li>
+        <li class="view-list-movie">Genre</li>
+        <li class="view-list-model">@Model.Genre</li>
+        <li class="view-list-movie">Viewer Rating</li>
+        <li class="view-list-model">@Model.Rating</li>
+        <li class="view-list-movie">Director</li>
+        <li class="view-list-model">@Model.Director</li>
+    </ul>
+</div>
+<div>
+    <h4 class="review-title-container"> Review</h4>
+    <p>
+        @Model.ViewerReview
+    </p>
+</div>
+
+<div style="display: block">
+    <a href="/Movie/UpdateMovie/@Model.MovieID">Update Movie</a>
+</div>
+
+<div class="delete-button-container">
+
+    @using (Html.BeginForm("DeleteMovie", "Movie", "Post"))
+    {
+        <input type="hidden" asp-for="MovieID" value="@Model.MovieID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this product" />
+    }
+</div>
+
+
